@@ -1,0 +1,5 @@
+int32[3] xyz_goal
+---
+bool is_success
+---
+string current_state
