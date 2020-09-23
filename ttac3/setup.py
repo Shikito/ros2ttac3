@@ -31,8 +31,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'server = ' + package_name + '.ttac3_action_server:main',
-            'client = ' + package_name + '.ttac3_action_client:main',
+            'action_server = ' + package_name + '.ttac3_action_server:main',
+            'action_client = ' + package_name + '.ttac3_action_client:main',
+            'service_server = ' + package_name + '.ttac3_service_server:main',
         ],
     },
 )
