@@ -1,7 +1,9 @@
 import rclpy
 from rclpy.node import Node
-from ttac3_interfaces.srv import TTAC3
 
+from std_msgs.msg import Int32MultiArray
+
+from ttac3_interfaces.srv import TTAC3
 from utils.win_wsl_socket_client import send_msg
 
 class TTAC3ServiceServer(Node):
@@ -13,6 +15,8 @@ class TTAC3ServiceServer(Node):
             'ttac3',
             self.move_ttac3_callback
         )
+
+        self.pub_ttac3_state = 
 
     def move_ttac3_callback(self, request, response):
         self.get_logger().info('Receive a request!')
