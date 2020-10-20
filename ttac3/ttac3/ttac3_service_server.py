@@ -37,9 +37,9 @@ class TTAC3ServiceServer(Node):
         self.ttac3_state = self._invisible_state
         self.get_logger().info(send_msg(f"xc.move_to_x_y_z({request.xyz_goal[0]},{request.xyz_goal[1]},{request.xyz_goal[2]})".encode()))
         self.ttac3_state = [
-            request.xyz_goal[0],
-            request.xyz_goal[1],
-            request.xyz_goal[2]
+            int(request.xyz_goal[0]),
+            int(request.xyz_goal[1]),
+            int(request.xyz_goal[2])
         ]
         self.get_logger().info('Done!')
 
