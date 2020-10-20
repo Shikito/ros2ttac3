@@ -35,6 +35,7 @@ class TTAC3ServiceServer(Node):
     def move_ttac3_callback(self, request, response):
         self.get_logger().info('Receive a request!')
         self.ttac3_state = self._invisible_state
+        self.pub_ttac3_state_callback()
         self.get_logger().info(send_msg(f"xc.move_to_x_y_z({request.xyz_goal[0]},{request.xyz_goal[1]},{request.xyz_goal[2]})".encode()))
         self.ttac3_state = [
             int(request.xyz_goal[0]),
