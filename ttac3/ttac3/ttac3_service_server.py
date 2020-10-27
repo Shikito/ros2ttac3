@@ -44,7 +44,6 @@ class TTAC3ServiceServer(Node):
             int(request.xyz_goal[2])
         ]
         self.get_logger().info('Done!')
-        time.sleep(2)
 
         response.is_success = True
         return response
